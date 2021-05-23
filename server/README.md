@@ -2,13 +2,14 @@
 
 > This is the server side package of WebAuthn. For full README, go to [WebAuthn](https://github.com/NoobTW/WebAuthn).
 
-Here are three methods in `wenauthn-server`: `register`, `login`, and `verify`.
+## Documentation
+There are three methods in `webauthn-server`: `register`, `login`, and `verify`.
 
-## register
+### register
 
-Generate credential options with given user `name`. This will be send to frontend for generating credentials.
+Generate credential options with given user `name`. This will be sent to the frontend for generating credentials.
 
-You should save the `credentialOpt.challenge` to `verify` to prevent replay attacks.
+You should save the `credentialOpt.challenge` and use `verify` for preventing replay attacks.
 
 ```javascript
 const user = {
@@ -20,13 +21,13 @@ const { user, credentialOpt } = register(user);
 // sendToFrontend(credentialOpt)
 ```
 
-## login
+### login
 
-Generate assertion with given user authenticators. This will be send to frontend for signature.
+Generates assertion given `user.authenticators`. This will be sent to the frontend for signature.
 
 You should
-- save the `assertion.challenge` to `verify` to prevent replay attacks.
-- set the Relying Party ID (`rpid`), usually it'll be your domain. Default value is 'localhost';
+- save the `assertion.challenge` and use `verify` for preventing replay attacks.
+- set the Relying Party ID (`rpid`). It will usually be your domain. Default value is 'localhost'.
 
 ```javascript
 const user = await User.find({ name: 'NoobTW' });
@@ -34,11 +35,11 @@ console.log(user.authenticators);
 const assertion = login(user, { rpId: 'localhost' });
 ```
 
-## verify
+### verify
 
-Verifying the authentications.
+Verify the authentications.
 
-### Register
+#### Register
 
 First, it checks if the challenge in the given session and given data are the same. Then it verifies the authenticator attestation response.
 
@@ -57,7 +58,7 @@ if (result.staus === 'ok') {
 }
 ```
 
-### Login
+#### Login
 
 First, it checks if the challenge in the given session and given data are the same. Then it verifies the signatures is valid with the given user's authenticator info.
 
@@ -72,7 +73,7 @@ const result = await verify ({
 	data,
 });
 
-if (result.staus === 'ok') {
+if (result.status === 'ok') {
 	// Login successfully.
 }
 ```

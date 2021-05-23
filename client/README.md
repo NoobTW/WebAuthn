@@ -2,13 +2,16 @@
 
 > This is the client side package of WebAuthn. For full README, go to [WebAuthn](https://github.com/NoobTW/WebAuthn).
 
-Here are two methods in `webauthn-client`: `register` and `login`.
+## Documentation
+There are two methods in `webauthn-client`: `register` and `login`. 
 
-For now, we use `axios` to fulfill the HTTP request. This may be changed in the future.
+:::info
+ℹ️ We are currently using `axios` to fulfill the HTTP request. This may be changed in the future.
+:::
 
-## Register
+### register
 
-It requests the credential options from server, generates the credentials using `navigator.credentials.create`, and sends back to server.
+Request the credential options from server, generates the credentials using `navigator.credentials.create`, and sends back to server.
 
 ```javascript
 const registerOptions = {
@@ -21,13 +24,13 @@ if (response) {
 }
 ```
 
-## Login
+## login
 
-It requests the assertion from server, signing the assertion with credentials, and sends back to server.
+Request assertion from server, signs the assertion with the user credentials, and sends it back to server for verification.
 
 ```javascript
 const loginOptions = {
-	LOGIN_URL: '/api/login',               // OPTIONAL: the server path to request the assertion.
+	LOGIN_URL: '/api/login',                // OPTIONAL: the server path to request the assertion.
 	LOGIN_RESP_URL: '/api/login_response',  // OPTIONAL: the server path to verify the signature.
 };
 const response = await login(name, loginOptions);
