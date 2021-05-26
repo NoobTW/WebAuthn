@@ -15,6 +15,7 @@ export default function Home() {
         setText(`${name} registered failed.`)
       }
     } catch (e) {
+      console.error(e);
       setText(`${name} registered with error.`);
     }
   };
@@ -28,6 +29,7 @@ export default function Home() {
         setText(`${name} login failed.`);
       }
     } catch (e) {
+      console.error(e);
       setText(`${name} login with error.`);
     }
   };

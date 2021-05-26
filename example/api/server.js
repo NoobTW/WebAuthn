@@ -21,6 +21,9 @@ app.use(async (ctx, next) => {
 });
 app.use(router.routes());
 
+// Set your RP_ID here.
+// process.env.RP_ID = 'localhost';
+
 app.listen(process.env.PORT || 10000, () => {
   console.log('server started.');
 });
