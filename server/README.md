@@ -77,3 +77,11 @@ if (result.status === 'ok') {
 	// Login successfully.
 }
 ```
+
+## Enviroments
+
+You have to set `proccess.env.RP_ID` as your domain name.
+
+```javascript
+process.env.RP_ID = 'noob.tw';
+```
