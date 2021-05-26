@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from '../styles/Home.module.css';
-import { register, login } from '../../../client';
+import { register, login } from '../../../client/lib/index.cjs';
 
 export default function Home() {
   const [name, setName] = useState('');

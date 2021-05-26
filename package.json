@@ -1,0 +1,27 @@
+{
+  "name": "webauthn",
+  "version": "0.1.0",
+  "description": "Implementation of WebAuthn API for server side and client side. Users register with a username and choose from one of the supported authenticators. The login process requires a matched username and authenticator pair.",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoobTW/webauthn.git"
+  },
+  "author": "NoobTW",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NoobTW/webauthn/issues"
+  },
+  "homepage": "https://github.com/NoobTW/webauthn#readme",
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.3"
+  }
+}
