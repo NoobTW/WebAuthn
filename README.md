@@ -12,6 +12,12 @@ The demo link is available here: *coming soon*
 
 You can also launch from the example folder. The server example is built with Koa.js, and the client example is built with Next.js.
 
+## Install
+
+```shell
+npm install webauthn-server webauthn-clt
+```
+
 ## Usage
 
 - [Server-side Usage](server)
