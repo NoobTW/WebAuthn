@@ -1,6 +1,6 @@
 {
   "name": "webauthn-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "WebAuthn Server",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",

@@ -2,6 +2,12 @@
 
 > This is the client side package of WebAuthn. For full README, go to [WebAuthn](https://github.com/NoobTW/WebAuthn).
 
+## Install
+
+```shell
+npm install webauthn-clt
+```
+
 ## Documentation
 There are two methods in `webauthn-client`: `register` and `login`. 
 

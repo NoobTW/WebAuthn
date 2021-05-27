@@ -1,6 +1,12 @@
-# WebAuthn-server
+# WebAuthn-Server
 
 > This is the server side package of WebAuthn. For full README, go to [WebAuthn](https://github.com/NoobTW/WebAuthn).
+
+## Install
+
+```shell
+npm install webauthn-server 
+```
 
 ## Documentation
 There are three methods in `webauthn-server`: `register`, `login`, and `verify`.

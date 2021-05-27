@@ -1,6 +1,6 @@
 {
-  "name": "webauthn-client",
-  "version": "0.1.0",
+  "name": "webauthn-clt",
+  "version": "0.1.1",
   "description": "WebAuthn Client",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
